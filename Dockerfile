@@ -14,7 +14,7 @@ RUN DEBIAN_FRONTEND=noninteractive wget https://nodejs.org/dist/v5.5.0/node-v5.5
 	&& make install
 RUN DEBIAN_FRONTEND=noninteractive apt-get clean \
 	&& apt-get remove build-essential \
-	&& apt-get autoremove \
+	&& apt-get autoremove -y \
 	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 WORKDIR /srv/www
