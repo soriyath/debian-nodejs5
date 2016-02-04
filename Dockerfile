@@ -2,7 +2,7 @@ FROM soriyath/debian-postgresql94
 MAINTAINER Sumi Straessle
 
 # NODEJS 5.5
-RUN	DEBIAN_FRONTEND=noninteractive set -ex && \
+RUN	DEBIAN_FRONTEND=noninteractive set -ex \
 	&& apt-get update \
 	&& apt-get install -y wget build-essential
 WORKDIR /usr/local/src
