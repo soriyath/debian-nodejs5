@@ -20,4 +20,4 @@ RUN apt-get clean \
 
 WORKDIR /srv/www
 
-CMD supervisord -c /etc/supervisor.conf
+CMD ["supervisord", "-c", "/etc/supervisor/supervisor.conf"]
